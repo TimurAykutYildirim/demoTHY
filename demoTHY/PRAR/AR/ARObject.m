@@ -22,12 +22,11 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-//
+// 
 
 #import "ARObject.h"
 #import "POIDetails.h"
-#import "CNPPopup.h"
-#import "CNPPopupController.h"
+#import <CNPPopupController/CNPPopupController-umbrella.h>
 
 
 @interface ARObject () <CNPPopupControllerDelegate>

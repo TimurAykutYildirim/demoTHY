@@ -10,7 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import FBSDKShareKit
-import CNPPopup
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, CNPPopupControllerDelegate {

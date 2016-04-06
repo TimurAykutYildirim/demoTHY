@@ -85,7 +85,7 @@ static inline UIViewAnimationOptions UIViewAnimationCurveToAnimationOptions(UIVi
 - (void)orientationChanged {
     
     UIInterfaceOrientation statusBarOrientation = [UIApplication sharedApplication].statusBarOrientation;
-    CGFloat angle = CNP_UIInterfaceOrientationAngleOfOrientation(statusBarOrientation);
+    CGFloat angle = UIInterfaceOrientationAngleOfOrientation(statusBarOrientation);
     CGAffineTransform transform = CGAffineTransformMakeRotation(angle);
     
     [UIView animateWithDuration:0.3 animations:^{
@@ -97,7 +97,7 @@ static inline UIViewAnimationOptions UIViewAnimationCurveToAnimationOptions(UIVi
     }];
 }
 
-CGFloat CNP_UIInterfaceOrientationAngleOfOrientation(UIInterfaceOrientation orientation)
+CGFloat UIInterfaceOrientationAngleOfOrientation(UIInterfaceOrientation orientation)
 {
     CGFloat angle;
     
