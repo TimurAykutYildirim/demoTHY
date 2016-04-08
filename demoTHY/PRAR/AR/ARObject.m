@@ -25,7 +25,6 @@
 // 
 
 #import "ARObject.h"
-#import "POIDetails.h"
 #import <CNPPopupController/CNPPopupController-umbrella.h>
 
 
@@ -37,7 +36,6 @@
 @property (nonatomic,strong) CNPPopupController *popupController;
 @end
 */
-
 @implementation ARObject
 
 - (void)showPopupWithStyle:(CNPPopupStyle)popupStyle {
@@ -46,10 +44,21 @@
     paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
     paragraphStyle.alignment = NSTextAlignmentCenter;
     
-    NSAttributedString *title = [[NSAttributedString alloc] initWithString:@"It's A Popup!" attributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:24], NSParagraphStyleAttributeName : paragraphStyle}];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *dummyIATA2 = [defaults objectForKey:@"dummyIATA"];
+    NSString *dummyICAO2 = [defaults objectForKey:@"dummyICAO"];
+    NSString *dummyOPERATOR2 = [defaults objectForKey:@"dummyOPERATOR"];
+    NSString *dummyTEMP2 = [defaults objectForKey:@"dummyTEMP"];
+    NSString *dummyWIND2 = [defaults objectForKey:@"dummyWIND"];
+    
+    NSString *popupTitle = [NSString stringWithFormat:@"%@ (IATA : %@ , ICAO : %@)", arTitle, dummyIATA2, dummyICAO2];
+    
+    NSString *popupLineTwo = [NSString stringWithFormat:@"Operator: %@ (Temp : %@ , Wind : %@)", dummyOPERATOR2, dummyTEMP2, dummyWIND2];
+    
+    NSAttributedString *title = [[NSAttributedString alloc] initWithString:popupTitle attributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:24], NSParagraphStyleAttributeName : paragraphStyle}];
     
     NSAttributedString *lineOne = [[NSAttributedString alloc] initWithString:@"You can add text and images" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18], NSParagraphStyleAttributeName : paragraphStyle}];
-    NSAttributedString *lineTwo = [[NSAttributedString alloc] initWithString:@"With style, using NSAttributedString" attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18], NSForegroundColorAttributeName : [UIColor colorWithRed:0.46 green:0.8 blue:1.0 alpha:1.0], NSParagraphStyleAttributeName : paragraphStyle}];
+    NSAttributedString *lineTwo = [[NSAttributedString alloc] initWithString:popupLineTwo attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18], NSForegroundColorAttributeName : [UIColor colorWithRed:0.46 green:0.8 blue:1.0 alpha:1.0], NSParagraphStyleAttributeName : paragraphStyle}];
     
     CNPPopupButton *button = [[CNPPopupButton alloc] initWithFrame:CGRectMake(0, 0, 200, 60)];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -182,7 +191,7 @@ andCurrentLocation:(CLLocationCoordinate2D)currLoc
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setInteger:arId forKey:@"id"];
-    NSLog(@"arID: {0}", arId);
+    NSLog(@"arID: %d", arId);
     [defaults setObject:arTitle forKey:@"title"];
     [defaults setDouble:lat forKey:@"latitude"];
     [defaults setDouble:lon forKey:@"longtitude"];
@@ -217,37 +226,57 @@ andCurrentLocation:(CLLocationCoordinate2D)currLoc
     //self.showPopupFormSheet();
     
     [self showPopupWithStyle:CNPPopupStyleActionSheet];
+    /*
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger poiID = [defaults integerForKey:@"id"];
+    NSLog(@"%ld", (long)poiID);*/
+    
+    NSLog(@"-----------------------");
+    
+    NSString* selectedAirport = [NSString stringWithFormat:@"%@", arTitle];
+    NSLog(selectedAirport);
+    NSInteger* selectedID = arId;
+    NSLog(@"%d", arId);
+    NSLog(@"");
+    NSLog(@"");
+    NSLog(@"");
+    
+    [self searchDummyData:arId]; // seçilen ID'nin dummyData'dan çeşitli bilgilerini alıyor
+    
+    NSLog(@"-----------------------");
     
     //[myPOI sizeThatFits:CGSizeMake(50, 50)]; // AMK7
     
     //POIDetails *poiDetails = [[POIDetails alloc] initWithNibName:@"POIDetails" bundle:nil]; // constructor
     //[self presentViewController:poiDetails animated:YES completion:nil];
     
+}
+
+// this method gets POI id and records required stuff only into nsuserdefaults
+-(void)searchDummyData:(NSInteger)identity
+{
+    NSUserDefaults *getterDummyData = [NSUserDefaults standardUserDefaults];
+    NSArray *dummyData = [getterDummyData objectForKey:@"dummyData"];
     
-    // obj-c popup kütüphanesinden önce, en son aktif olan bu
-    /*
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"My Alert"
-                                                                   message:@"This is an alert."
-                                                            preferredStyle:UIAlertControllerStyleAlert];
+    NSString *dummyIATA = dummyData[identity][@"iata"];
+    NSString *dummyICAO = dummyData[identity][@"iata"];
+    NSString *dummyOPERTOR = dummyData[identity][@"iata"];
+    NSString *dummyTEMP = dummyData[identity][@"iata"];
+    NSString *dummyWIND = dummyData[identity][@"iata"];
     
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {}];
+    NSLog(dummyIATA);
+    NSLog(dummyICAO);
+    NSLog(dummyOPERTOR);
+    NSLog(dummyTEMP);
+    NSLog(dummyWIND);
     
-    [alert addAction:defaultAction];
-    [self presentViewController:alert animated:YES completion:nil];
-     */
-    
-    /*
-    UIAlertView* alert = [[UIAlertView alloc] initWithTitle: @"Test Alert" message: @"Alert With Custom View" delegate:nil cancelButtonTitle:@"BTN1" otherButtonTitles:@"BTN2", nil];
-    
-    UIImage* imgMyImage = [UIImage imageNamed:@"ist.png"];
-    UIImageView* ivMyImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, imgMyImage.size.width, imgMyImage.size.height)];
-    [ivMyImageView setImage:imgMyImage];
-    
-    [alert setValue: ivMyImageView forKey:@"accessoryView"];
-    [alert show];
-     */
-    
+    NSUserDefaults *dummyDefaults = [NSUserDefaults standardUserDefaults];
+    [dummyDefaults setObject:dummyIATA forKey:@"dummyIATA"];
+    [dummyDefaults setObject:dummyICAO forKey:@"dummyICAO"];
+    [dummyDefaults setObject:dummyOPERTOR forKey:@"dummyOPERTOR"];
+    [dummyDefaults setObject:dummyTEMP forKey:@"dummyTEMP"];
+    [dummyDefaults setObject:dummyWIND forKey:@"dummyWIND"];
+    [dummyDefaults synchronize];
 }
 
 // bunu methodu timur ekledi

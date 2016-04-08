@@ -41,7 +41,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         // MARK: API REQUEST AND PLANE PROJECTION RELATED STUFF
         
         // Let's add more flights!
-        let flights = ["AVA11","UX97","EK204"]
+        let flights = ["KLM785"]
         for flight in flights {
             apiRequest(flight)
         }
@@ -72,7 +72,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         if let plane = annotation as? FlightModel {
             annotationView.image = UIImage(named: "airplane")
             annotationView.annotation = plane
-            annotationView.canShowCallout = true
+            annotationView.canShowCallout = false // uçağın popup'ı
             plane.planeAnnotationView = annotationView
             plane.transform = self.mapView.transform
             plane.delegate = self
@@ -133,7 +133,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
                     x+=1
                 }
                 
-                print("Number of waypoints: \(arrayOFWaypoint.count)")
+                //print("Number of waypoints: \(arrayOFWaypoint.count)")
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     
                     let flightModel = FlightModel()
@@ -167,7 +167,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         let region = MKCoordinateRegionMake(locValue, MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
         self.mapView.setRegion(region, animated: true)
         self.locationManager.stopUpdatingLocation()
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        //print("locations = \(locValue.latitude) \(locValue.longitude)")
     }
 
     

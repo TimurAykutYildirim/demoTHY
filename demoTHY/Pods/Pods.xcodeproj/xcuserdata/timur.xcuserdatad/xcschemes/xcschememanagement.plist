@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KASlideShow.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,7 +22,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7F4E94C91089DD6B1D72EC90CB9AB57A</key>
+		<key>13FEE8FD8A06F303DB0FDC4099BF462B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>70335C40353D57D5FFD0299E43938B1D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

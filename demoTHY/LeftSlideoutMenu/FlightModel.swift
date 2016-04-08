@@ -64,7 +64,7 @@ class FlightModel: MKPointAnnotation {
         let geodesicPolyline = MKGeodesicPolyline(coordinates: &coords, count: coordinates.count) // BURDAKİ 2 NE İŞE YARIYOR?
         
         
-        print(geodesicPolyline.pointCount)
+        //print(geodesicPolyline.pointCount)
         
         self.flightpathPolyline = geodesicPolyline
         

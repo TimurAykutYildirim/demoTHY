@@ -7,54 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00CA01A47145770115DB309E8D921A7B /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */; };
-		1B32B01F03AD8B302C0389EFD698D1D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
-		5A4946DE77223E0A3BCB09D5A2C886D8 /* CNPPopupController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8402EB7940F5F1698F4A49CBBB6866A /* CNPPopupController-dummy.m */; };
+		29C8D34E6E82842E725D55874E84C67E /* KASlideShow.h in Headers */ = {isa = PBXBuildFile; fileRef = 582A53B068A73A3B1231A4130F3BCD5E /* KASlideShow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3996225AF3C2A44291BF6665CFA9D830 /* KASlideShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 329E254EA5A4F28D1ABF51A3295D377F /* KASlideShow.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5954EC7C9B661BC16D4D4DD348F61D87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		5A4946DE77223E0A3BCB09D5A2C886D8 /* CNPPopupController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D001A1F39583FF40C3E67AD7CE76EA3D /* CNPPopupController-dummy.m */; };
+		6C9E4517AC2DB15D1017C2B82723DB00 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		704BA5DF05566C65691D552CDE1270CF /* KASlideShow-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FD956214C274E42991511AA9783BB14 /* KASlideShow-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E95D6788A1F0587420947FA6DBD2027 /* KASlideShow-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFA435D43ADE104663C61AA0CC08ABE /* KASlideShow-dummy.m */; };
 		91132336A682B460B7052E93D5C1604F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
-		A6EAEB7C6C2CFC35C97B96CD93B8F7C4 /* CNPPopupController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3395DD77072205F7F0DABBC77E410E05 /* CNPPopupController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3BB332AB6BE7A13D19D87BDC6606217 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */; };
+		A6EAEB7C6C2CFC35C97B96CD93B8F7C4 /* CNPPopupController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B4923273F62CE33F65103AF4269EF0C /* CNPPopupController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BFF2829C97B6A9B5CA862A7C39E101EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
-		CDF51EE3D0730898DF29D50484814FC1 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6F8F9CBCB2058447C6C43579D15232A /* CNPPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB54C35F5B28780B788584A1171255DA /* CNPPopupController.m */; };
-		FD0A6251084DC38929D61E65CF20AD58 /* CNPPopupController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC37C598FBA398015F5888E890F19B8F /* CNPPopupController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3F789068DA11B383613F00E90B40FED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		E6F8F9CBCB2058447C6C43579D15232A /* CNPPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C759B16CBB5B768FBE7E4AE30E0ECD8 /* CNPPopupController.m */; };
+		FD0A6251084DC38929D61E65CF20AD58 /* CNPPopupController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD0E774E66DDE703618ED2C915351E50 /* CNPPopupController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		75B2A94D235C454BC3C665D83CB46B54 /* PBXContainerItemProxy */ = {
+		5AF2CF8CD712EFA1C07D60DC6F6A967B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2D17D2E6A8AD8B5A2D1F30A3032805E;
 			remoteInfo = CNPPopupController;
 		};
+		6D3E2F60D2BE3C42C6210BC8BAB80EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13FEE8FD8A06F303DB0FDC4099BF462B;
+			remoteInfo = KASlideShow;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03EE335DA78FD0C53FC93D6621B6FCDA /* CNPPopupController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CNPPopupController.modulemap; sourceTree = "<group>"; };
+		0B4923273F62CE33F65103AF4269EF0C /* CNPPopupController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CNPPopupController.h; path = CNPPopupController/CNPPopupController.h; sourceTree = "<group>"; };
 		2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
-		3395DD77072205F7F0DABBC77E410E05 /* CNPPopupController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CNPPopupController.h; path = CNPPopupController/CNPPopupController.h; sourceTree = "<group>"; };
-		599380EEE01249E351905F6EEE01B1A5 /* CNPPopupController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CNPPopupController-prefix.pch"; sourceTree = "<group>"; };
-		6B2BCEB2D6408F0D7FF75AD04BA82D54 /* CNPPopupController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CNPPopupController.xcconfig; sourceTree = "<group>"; };
-		6D37AE81E9969AA6FE63AFBBDAA7E044 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		329E254EA5A4F28D1ABF51A3295D377F /* KASlideShow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KASlideShow.m; path = KASlideShow/KASlideShow.m; sourceTree = "<group>"; };
+		3E2965DB187EC3C6BE2C82AFBEA36B38 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		582A53B068A73A3B1231A4130F3BCD5E /* KASlideShow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KASlideShow.h; path = KASlideShow/KASlideShow.h; sourceTree = "<group>"; };
+		59A0996D684A9218157AB4C7CA5E415D /* CNPPopupController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CNPPopupController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C2D947B06BB7E5F2E30038D5F3754B4 /* CNPPopupController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CNPPopupController-prefix.pch"; sourceTree = "<group>"; };
+		5FD956214C274E42991511AA9783BB14 /* KASlideShow-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KASlideShow-umbrella.h"; sourceTree = "<group>"; };
+		6DFA435D43ADE104663C61AA0CC08ABE /* KASlideShow-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KASlideShow-dummy.m"; sourceTree = "<group>"; };
 		6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		72163942B4296D4E0DCBB971144C0596 /* KASlideShow-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KASlideShow-prefix.pch"; sourceTree = "<group>"; };
 		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		7C759B16CBB5B768FBE7E4AE30E0ECD8 /* CNPPopupController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CNPPopupController.m; path = CNPPopupController/CNPPopupController.m; sourceTree = "<group>"; };
 		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		95300B05B532474F6833B3CE8B9A8D79 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		A8F266EBF5F657B797BA5C00F9828A2A /* CNPPopupController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CNPPopupController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8402EB7940F5F1698F4A49CBBB6866A /* CNPPopupController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CNPPopupController-dummy.m"; sourceTree = "<group>"; };
+		A021349BF4CF9A3D7A3E6AE9CF9D0EDA /* CNPPopupController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CNPPopupController.xcconfig; sourceTree = "<group>"; };
+		A6064FB324445A01C357DF5780DB11C6 /* KASlideShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KASlideShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9F5EE617A8B58646480215B87F28CFB /* KASlideShow.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KASlideShow.xcconfig; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BC37C598FBA398015F5888E890F19B8F /* CNPPopupController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CNPPopupController-umbrella.h"; sourceTree = "<group>"; };
 		C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C647F7A0851B1B565638221B5C44ECB7 /* CNPPopupController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CNPPopupController.modulemap; sourceTree = "<group>"; };
 		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		D001A1F39583FF40C3E67AD7CE76EA3D /* CNPPopupController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CNPPopupController-dummy.m"; sourceTree = "<group>"; };
 		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D14FF7C749D7F018367FC344B1E98C1D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		DD0E774E66DDE703618ED2C915351E50 /* CNPPopupController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CNPPopupController-umbrella.h"; sourceTree = "<group>"; };
+		E5DD54D9671FE5510F70B220C6156CCC /* KASlideShow.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KASlideShow.modulemap; sourceTree = "<group>"; };
 		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
 		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB54C35F5B28780B788584A1171255DA /* CNPPopupController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CNPPopupController.m; path = CNPPopupController/CNPPopupController.m; sourceTree = "<group>"; };
+		FD6BC3E43D2AC78AA26000B79A4036C3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		26EAF3FC2D6F0788ACEE2D4515667365 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3F789068DA11B383613F00E90B40FED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3D37FC3453661471EDDC8EC07E3C54D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,11 +93,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F4A0423F2D429BC6BBB5D160B1DBAD8C /* Frameworks */ = {
+		F84DC9BE95C0EA97D27222AFC9417BBA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B32B01F03AD8B302C0389EFD698D1D0 /* Foundation.framework in Frameworks */,
+				5954EC7C9B661BC16D4D4DD348F61D87 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +113,20 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		2563894A4E9A4A61AC45D5962A78B618 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD6BC3E43D2AC78AA26000B79A4036C3 /* Info.plist */,
+				E5DD54D9671FE5510F70B220C6156CCC /* KASlideShow.modulemap */,
+				B9F5EE617A8B58646480215B87F28CFB /* KASlideShow.xcconfig */,
+				6DFA435D43ADE104663C61AA0CC08ABE /* KASlideShow-dummy.m */,
+				72163942B4296D4E0DCBB971144C0596 /* KASlideShow-prefix.pch */,
+				5FD956214C274E42991511AA9783BB14 /* KASlideShow-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KASlideShow";
+			sourceTree = "<group>";
+		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,15 +135,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		67866776FDEA802CFF155EEC306E664A /* Support Files */ = {
+		65E5B51453C5ABDA863077E9E17DFF67 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				03EE335DA78FD0C53FC93D6621B6FCDA /* CNPPopupController.modulemap */,
-				6B2BCEB2D6408F0D7FF75AD04BA82D54 /* CNPPopupController.xcconfig */,
-				B8402EB7940F5F1698F4A49CBBB6866A /* CNPPopupController-dummy.m */,
-				599380EEE01249E351905F6EEE01B1A5 /* CNPPopupController-prefix.pch */,
-				BC37C598FBA398015F5888E890F19B8F /* CNPPopupController-umbrella.h */,
-				D14FF7C749D7F018367FC344B1E98C1D /* Info.plist */,
+				C647F7A0851B1B565638221B5C44ECB7 /* CNPPopupController.modulemap */,
+				A021349BF4CF9A3D7A3E6AE9CF9D0EDA /* CNPPopupController.xcconfig */,
+				D001A1F39583FF40C3E67AD7CE76EA3D /* CNPPopupController-dummy.m */,
+				5C2D947B06BB7E5F2E30038D5F3754B4 /* CNPPopupController-prefix.pch */,
+				DD0E774E66DDE703618ED2C915351E50 /* CNPPopupController-umbrella.h */,
+				3E2965DB187EC3C6BE2C82AFBEA36B38 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/CNPPopupController";
@@ -129,29 +172,20 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				EE7E58DAF46A23ED3E9A0901FA86E06A /* Pods */,
-				8AFFB7549EE6CDBA20E71CDB1C1D27D3 /* Products */,
+				EA7BAD9BF240D20942053341DCE83B50 /* Pods */,
+				A11C91686C2854512D3689007A07D593 /* Products */,
 				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8AFFB7549EE6CDBA20E71CDB1C1D27D3 /* Products */ = {
+		A11C91686C2854512D3689007A07D593 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A8F266EBF5F657B797BA5C00F9828A2A /* CNPPopupController.framework */,
-				6D37AE81E9969AA6FE63AFBBDAA7E044 /* Pods.framework */,
+				59A0996D684A9218157AB4C7CA5E415D /* CNPPopupController.framework */,
+				A6064FB324445A01C357DF5780DB11C6 /* KASlideShow.framework */,
+				95300B05B532474F6833B3CE8B9A8D79 /* Pods.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		92906CC82F75A357EB59ED93D713C3F4 /* CNPPopupController */ = {
-			isa = PBXGroup;
-			children = (
-				3395DD77072205F7F0DABBC77E410E05 /* CNPPopupController.h */,
-				FB54C35F5B28780B788584A1171255DA /* CNPPopupController.m */,
-				67866776FDEA802CFF155EEC306E664A /* Support Files */,
-			);
-			path = CNPPopupController;
 			sourceTree = "<group>";
 		};
 		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
@@ -162,10 +196,31 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		EE7E58DAF46A23ED3E9A0901FA86E06A /* Pods */ = {
+		C14DDB47531899F805D984E0D3293141 /* KASlideShow */ = {
 			isa = PBXGroup;
 			children = (
-				92906CC82F75A357EB59ED93D713C3F4 /* CNPPopupController */,
+				582A53B068A73A3B1231A4130F3BCD5E /* KASlideShow.h */,
+				329E254EA5A4F28D1ABF51A3295D377F /* KASlideShow.m */,
+				2563894A4E9A4A61AC45D5962A78B618 /* Support Files */,
+			);
+			path = KASlideShow;
+			sourceTree = "<group>";
+		};
+		E5852D2403F7A3F3B5DC072982497F02 /* CNPPopupController */ = {
+			isa = PBXGroup;
+			children = (
+				0B4923273F62CE33F65103AF4269EF0C /* CNPPopupController.h */,
+				7C759B16CBB5B768FBE7E4AE30E0ECD8 /* CNPPopupController.m */,
+				65E5B51453C5ABDA863077E9E17DFF67 /* Support Files */,
+			);
+			path = CNPPopupController;
+			sourceTree = "<group>";
+		};
+		EA7BAD9BF240D20942053341DCE83B50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5852D2403F7A3F3B5DC072982497F02 /* CNPPopupController */,
+				C14DDB47531899F805D984E0D3293141 /* KASlideShow */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -182,33 +237,60 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FCAC14AAFE8187C305ADA2613C279EB6 /* Headers */ = {
+		8EA9DD5E86C8D7FAF311240641A2BC39 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDF51EE3D0730898DF29D50484814FC1 /* Pods-umbrella.h in Headers */,
+				704BA5DF05566C65691D552CDE1270CF /* KASlideShow-umbrella.h in Headers */,
+				29C8D34E6E82842E725D55874E84C67E /* KASlideShow.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4C6C9043CCD7CEDC0863C57C8BD19F0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C9E4517AC2DB15D1017C2B82723DB00 /* Pods-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7F4E94C91089DD6B1D72EC90CB9AB57A /* Pods */ = {
+		13FEE8FD8A06F303DB0FDC4099BF462B /* KASlideShow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DCB22A4D293988F980B5F1CCEC8E13E9 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 7080BDD0B9B404C9FCB1B4F64831D308 /* Build configuration list for PBXNativeTarget "KASlideShow" */;
 			buildPhases = (
-				91CDBD20DA5FA4D706107055C2D9CE07 /* Sources */,
-				F4A0423F2D429BC6BBB5D160B1DBAD8C /* Frameworks */,
-				FCAC14AAFE8187C305ADA2613C279EB6 /* Headers */,
+				E5B7AC90479A7079E044D6BE0735C333 /* Sources */,
+				26EAF3FC2D6F0788ACEE2D4515667365 /* Frameworks */,
+				8EA9DD5E86C8D7FAF311240641A2BC39 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BBE1F4B30782FBF4E816E546A79B69E8 /* PBXTargetDependency */,
+			);
+			name = KASlideShow;
+			productName = KASlideShow;
+			productReference = A6064FB324445A01C357DF5780DB11C6 /* KASlideShow.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		70335C40353D57D5FFD0299E43938B1D /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 180A1881F419FD31D1CBC526C08979EC /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				58A43AE3989DFA2C257C98935FD7AB7B /* Sources */,
+				F84DC9BE95C0EA97D27222AFC9417BBA /* Frameworks */,
+				E4C6C9043CCD7CEDC0863C57C8BD19F0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C07B652A6E1B8C10C68849E622D2483 /* PBXTargetDependency */,
+				280EF850FDC92D5BB11174995EF20139 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = 6D37AE81E9969AA6FE63AFBBDAA7E044 /* Pods.framework */;
+			productReference = 95300B05B532474F6833B3CE8B9A8D79 /* Pods.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D2D17D2E6A8AD8B5A2D1F30A3032805E /* CNPPopupController */ = {
@@ -225,7 +307,7 @@
 			);
 			name = CNPPopupController;
 			productName = CNPPopupController;
-			productReference = A8F266EBF5F657B797BA5C00F9828A2A /* CNPPopupController.framework */;
+			productReference = 59A0996D684A9218157AB4C7CA5E415D /* CNPPopupController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -245,12 +327,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 8AFFB7549EE6CDBA20E71CDB1C1D27D3 /* Products */;
+			productRefGroup = A11C91686C2854512D3689007A07D593 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				D2D17D2E6A8AD8B5A2D1F30A3032805E /* CNPPopupController */,
-				7F4E94C91089DD6B1D72EC90CB9AB57A /* Pods */,
+				13FEE8FD8A06F303DB0FDC4099BF462B /* KASlideShow */,
+				70335C40353D57D5FFD0299E43938B1D /* Pods */,
 			);
 		};
 /* End PBXProject section */
@@ -265,22 +348,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91CDBD20DA5FA4D706107055C2D9CE07 /* Sources */ = {
+		58A43AE3989DFA2C257C98935FD7AB7B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00CA01A47145770115DB309E8D921A7B /* Pods-dummy.m in Sources */,
+				A3BB332AB6BE7A13D19D87BDC6606217 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B7AC90479A7079E044D6BE0735C333 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E95D6788A1F0587420947FA6DBD2027 /* KASlideShow-dummy.m in Sources */,
+				3996225AF3C2A44291BF6665CFA9D830 /* KASlideShow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BBE1F4B30782FBF4E816E546A79B69E8 /* PBXTargetDependency */ = {
+		280EF850FDC92D5BB11174995EF20139 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KASlideShow;
+			target = 13FEE8FD8A06F303DB0FDC4099BF462B /* KASlideShow */;
+			targetProxy = 6D3E2F60D2BE3C42C6210BC8BAB80EEA /* PBXContainerItemProxy */;
+		};
+		6C07B652A6E1B8C10C68849E622D2483 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CNPPopupController;
 			target = D2D17D2E6A8AD8B5A2D1F30A3032805E /* CNPPopupController */;
-			targetProxy = 75B2A94D235C454BC3C665D83CB46B54 /* PBXContainerItemProxy */;
+			targetProxy = 5AF2CF8CD712EFA1C07D60DC6F6A967B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -319,9 +417,63 @@
 			};
 			name = Release;
 		};
+		2893EDB4C463D21B103F93E93FC25572 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9F5EE617A8B58646480215B87F28CFB /* KASlideShow.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KASlideShow/KASlideShow-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KASlideShow/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KASlideShow/KASlideShow.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = KASlideShow;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		34700D902C6F6481764B3A89A24E6374 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9F5EE617A8B58646480215B87F28CFB /* KASlideShow.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KASlideShow/KASlideShow-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KASlideShow/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KASlideShow/KASlideShow.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KASlideShow;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		4E5F774FB1B88A74F0B1AE6018883DA7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B2BCEB2D6408F0D7FF75AD04BA82D54 /* CNPPopupController.xcconfig */;
+			baseConfigurationReference = A021349BF4CF9A3D7A3E6AE9CF9D0EDA /* CNPPopupController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -385,37 +537,7 @@
 			};
 			name = Debug;
 		};
-		6065FE2882B6ABBF0C43721187D6C2F1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		950D3DA344E4AD005DA595FBCE7D8C81 /* Debug */ = {
+		5769F04CBEE3D61D139D0F486C7BE7E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */;
 			buildSettings = {
@@ -445,9 +567,39 @@
 			};
 			name = Debug;
 		};
+		F0AC3751B45DD2135C588D29CE1E487A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		FEB675AF9044CFC9D260D001CE5EBB29 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B2BCEB2D6408F0D7FF75AD04BA82D54 /* CNPPopupController.xcconfig */;
+			baseConfigurationReference = A021349BF4CF9A3D7A3E6AE9CF9D0EDA /* CNPPopupController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -475,6 +627,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		180A1881F419FD31D1CBC526C08979EC /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5769F04CBEE3D61D139D0F486C7BE7E9 /* Debug */,
+				F0AC3751B45DD2135C588D29CE1E487A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -484,20 +645,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		7080BDD0B9B404C9FCB1B4F64831D308 /* Build configuration list for PBXNativeTarget "KASlideShow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2893EDB4C463D21B103F93E93FC25572 /* Debug */,
+				34700D902C6F6481764B3A89A24E6374 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A7C2DDEF61322D4E2D49987DFA976D39 /* Build configuration list for PBXNativeTarget "CNPPopupController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FEB675AF9044CFC9D260D001CE5EBB29 /* Debug */,
 				4E5F774FB1B88A74F0B1AE6018883DA7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DCB22A4D293988F980B5F1CCEC8E13E9 /* Build configuration list for PBXNativeTarget "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				950D3DA344E4AD005DA595FBCE7D8C81 /* Debug */,
-				6065FE2882B6ABBF0C43721187D6C2F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

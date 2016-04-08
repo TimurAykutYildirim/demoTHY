@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		161107637E9B89076526A17E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F61934D2EE93A1C845C99C4 /* Pods.framework */; };
-		394E83001CA2FAC60093EF80 /* POIDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = D116FAF51C82027500381A1D /* POIDetails.xib */; };
 		3971793A1CB5772700B1BBD8 /* FlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397179391CB5772700B1BBD8 /* FlightModel.swift */; };
 		3971793E1CB57DCD00B1BBD8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3971793D1CB57DCD00B1BBD8 /* Pods.framework */; };
 		397179401CB584A400B1BBD8 /* airplane.png in Resources */ = {isa = PBXBuildFile; fileRef = 3971793F1CB584A400B1BBD8 /* airplane.png */; };
-		D116FAF31C82023D00381A1D /* POIDetails.h in Headers */ = {isa = PBXBuildFile; fileRef = D116FAF11C82023D00381A1D /* POIDetails.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D116FAF41C82023D00381A1D /* POIDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = D116FAF21C82023D00381A1D /* POIDetails.m */; };
-		D116FAF61C82027500381A1D /* POIDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = D116FAF51C82027500381A1D /* POIDetails.xib */; };
+		39D4F3051CB7D0C2007589B0 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D4F3021CB7D0C2007589B0 /* 1.png */; };
+		39D4F3061CB7D0C2007589B0 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39D4F3031CB7D0C2007589B0 /* 2.jpg */; };
+		39D4F3071CB7D0C2007589B0 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39D4F3041CB7D0C2007589B0 /* 3.jpg */; };
 		D1246D551C805CC500440A64 /* ARObject.xib in Resources */ = {isa = PBXBuildFile; fileRef = D14219B51C7B3C72006A6865 /* ARObject.xib */; };
 		D1246D561C805CC500440A64 /* ar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D14219B81C7B3C72006A6865 /* ar_icon.png */; };
 		D1246D571C805CC500440A64 /* ar_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = D14219B91C7B3C72006A6865 /* ar_overlay.png */; };
@@ -115,11 +114,11 @@
 		3971793C1CB57D4B00B1BBD8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3971793D1CB57DCD00B1BBD8 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
 		3971793F1CB584A400B1BBD8 /* airplane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = airplane.png; path = ../../../../../Downloads/ucak_icon/airplane.png; sourceTree = "<group>"; };
+		39D4F3021CB7D0C2007589B0 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		39D4F3031CB7D0C2007589B0 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		39D4F3041CB7D0C2007589B0 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		4F61934D2EE93A1C845C99C4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA761386C2F7D168CA5F5BF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		D116FAF11C82023D00381A1D /* POIDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIDetails.h; sourceTree = "<group>"; };
-		D116FAF21C82023D00381A1D /* POIDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIDetails.m; sourceTree = "<group>"; };
-		D116FAF51C82027500381A1D /* POIDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = POIDetails.xib; sourceTree = "<group>"; };
 		D14219911C7B3C37006A6865 /* PRAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PRAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14219931C7B3C37006A6865 /* PRAR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRAR.h; sourceTree = "<group>"; };
 		D14219951C7B3C37006A6865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -210,6 +209,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39C4564F1CB7BDAD00DAF578 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				39D4F3021CB7D0C2007589B0 /* 1.png */,
+				39D4F3031CB7D0C2007589B0 /* 2.jpg */,
+				39D4F3041CB7D0C2007589B0 /* 3.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		3B7DF35A0E36D631FA522BB6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,9 +268,6 @@
 				D14219B31C7B3C72006A6865 /* ARObject.h */,
 				D14219B41C7B3C72006A6865 /* ARObject.m */,
 				D14219B51C7B3C72006A6865 /* ARObject.xib */,
-				D116FAF11C82023D00381A1D /* POIDetails.h */,
-				D116FAF21C82023D00381A1D /* POIDetails.m */,
-				D116FAF51C82027500381A1D /* POIDetails.xib */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -339,6 +345,7 @@
 		FCDFC0811B2F7F110015115E /* LeftSlideoutMenu */ = {
 			isa = PBXGroup;
 			children = (
+				39C4564F1CB7BDAD00DAF578 /* images */,
 				3971793F1CB584A400B1BBD8 /* airplane.png */,
 				D14219DE1C7B3E82006A6865 /* FBSDK */,
 				FCDFC0841B2F7F110015115E /* AppDelegate.swift */,
@@ -391,7 +398,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D116FAF31C82023D00381A1D /* POIDetails.h in Headers */,
 				D14219C71C7B3C72006A6865 /* ARObject.h in Headers */,
 				D14219D31C7B3C72006A6865 /* LocationMath.h in Headers */,
 				D14219D01C7B3C72006A6865 /* ARRadar.h in Headers */,
@@ -543,7 +549,6 @@
 				D14219CE1C7B3C72006A6865 /* Radar.png in Resources */,
 				D14219CF1C7B3C72006A6865 /* RadarMV.png in Resources */,
 				D14219CD1C7B3C72006A6865 /* ar_overlay@2x.png in Resources */,
-				D116FAF61C82027500381A1D /* POIDetails.xib in Resources */,
 				D14219CC1C7B3C72006A6865 /* ar_overlay.png in Resources */,
 				D14219D21C7B3C72006A6865 /* ARRadar.xib in Resources */,
 			);
@@ -564,12 +569,14 @@
 				FCDFC0911B2F7F120015115E /* LaunchScreen.xib in Resources */,
 				FCDFC08E1B2F7F120015115E /* Images.xcassets in Resources */,
 				397179401CB584A400B1BBD8 /* airplane.png in Resources */,
-				394E83001CA2FAC60093EF80 /* POIDetails.xib in Resources */,
 				D1246D551C805CC500440A64 /* ARObject.xib in Resources */,
+				39D4F3071CB7D0C2007589B0 /* 3.jpg in Resources */,
 				D1246D561C805CC500440A64 /* ar_icon.png in Resources */,
 				D1246D571C805CC500440A64 /* ar_overlay.png in Resources */,
 				D1246D581C805CC500440A64 /* ar_overlay@2x.png in Resources */,
 				D1246D591C805CC500440A64 /* Radar.png in Resources */,
+				39D4F3061CB7D0C2007589B0 /* 2.jpg in Resources */,
+				39D4F3051CB7D0C2007589B0 /* 1.png in Resources */,
 				D1246D5A1C805CC500440A64 /* RadarMV.png in Resources */,
 				D1246D5B1C805CC500440A64 /* ARRadar.xib in Resources */,
 			);
@@ -642,7 +649,6 @@
 				D14219C61C7B3C72006A6865 /* ARController.m in Sources */,
 				D14219C81C7B3C72006A6865 /* ARObject.m in Sources */,
 				D14219D61C7B3C72006A6865 /* PRARManager.m in Sources */,
-				D116FAF41C82023D00381A1D /* POIDetails.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

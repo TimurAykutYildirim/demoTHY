@@ -5,3 +5,4 @@ use_frameworks!
 link_with 'demoTHY'
 
 pod 'CNPPopupController'
+pod 'KASlideShow'
