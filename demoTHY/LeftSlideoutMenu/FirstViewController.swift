@@ -41,7 +41,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         // MARK: API REQUEST AND PLANE PROJECTION RELATED STUFF
         
         // Let's add more flights!
-        let flights = ["KLM785"]
+        let flights = ["TAP203"] 
         for flight in flights {
             apiRequest(flight)
         }
@@ -64,7 +64,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     }
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        let planeIdentifier = "Plane"
+        let planeIdentifier = "Plane" // it's because plane has landed
         
         let annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(planeIdentifier)
             ?? MKAnnotationView(annotation: annotation, reuseIdentifier: planeIdentifier)
@@ -80,7 +80,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         
         return annotationView
     }
-    
+    // Now we only need the data ( I mean the structure has to be correct)
     func togglePlanePath(plane : FlightModel){
         
         if plane.isPathVisible {
@@ -89,6 +89,8 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         } else {
             self.mapView.addOverlay(plane.flightpathPolyline)
             plane.isPathVisible = true
+            let popup = ARObject.popupControllerWithDictionary(plane.popupDictionary, style: .ActionSheet)
+            popup.presentPopupControllerAnimated(true)
         }
     }
     
@@ -105,19 +107,19 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             
             // Get data as string
             do {
-                let jsonObject = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions())
-                guard let result = jsonObject["InFlightInfoResult"] else {
+                let jsonObject = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions()) as! [String : AnyObject]
+                guard let result = jsonObject["InFlightInfoResult"] as? [String : AnyObject] else {
                     return
                 }
-                let waypointsString = result!["waypoints"]
-                let groundSpeed = result!["groundspeed"] as! Double
+                let waypointsString = result["waypoints"]
+                let groundSpeed = result["groundspeed"] as! Double
                 print("groundSpeed = \(groundSpeed)")
-                let planelocation = CLLocation(latitude: Double(result!["latitude"] as! NSNumber), longitude: Double(result!["longitude"] as! NSNumber))
+                let planelocation = CLLocation(latitude: Double(result["latitude"] as! NSNumber), longitude: Double(result["longitude"] as! NSNumber))
                 let currentCoordinate = planelocation
                 
                 print("\(waypointsString)")
                 
-                let parts = waypointsString!!.componentsSeparatedByString(" ")
+                let parts = waypointsString!.componentsSeparatedByString(" ")
                 
                 var arrayOFWaypoint = [CLLocation]()
                 
@@ -133,12 +135,15 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
                     x+=1
                 }
                 
+                let identificationOfThePLane = result["ident"] as? String
+                
                 //print("Number of waypoints: \(arrayOFWaypoint.count)")
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     
                     let flightModel = FlightModel()
-                    flightModel.setup("Plane", groundSpeed: groundSpeed, fetchedCoordinates: arrayOFWaypoint, currentCoordinate: currentCoordinate)
+                    flightModel.setup(identificationOfThePLane!, groundSpeed: groundSpeed, fetchedCoordinates: arrayOFWaypoint, currentCoordinate: currentCoordinate)
                     self.models.append(flightModel)
+                    flightModel.popupDictionary = result
                     
                     self.mapView.addAnnotation(flightModel)
                 })

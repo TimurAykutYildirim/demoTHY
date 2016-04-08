@@ -25,7 +25,6 @@
 // 
 
 #import "ARObject.h"
-#import <CNPPopupController/CNPPopupController-umbrella.h>
 
 
 @interface ARObject () <CNPPopupControllerDelegate>
@@ -38,20 +37,37 @@
 */
 @implementation ARObject
 
+
+
+
 - (void)showPopupWithStyle:(CNPPopupStyle)popupStyle {
+    self.popupController = [ARObject popupControllerWithDictionary:self.dataDictionary style:popupStyle];
+    self.popupController.delegate = self;
+    [self.popupController presentPopupControllerAnimated:YES];
+}
+
+// I don't want to retype it into swift, because we already have it here, I'll just reuse it
++ (CNPPopupController *)popupControllerWithDictionary: (NSDictionary *)dictionary style: (CNPPopupStyle)popupStyle
+{
+
     
     NSMutableParagraphStyle *paragraphStyle = NSMutableParagraphStyle.new;
     paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
     paragraphStyle.alignment = NSTextAlignmentCenter;
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *dummyIATA2 = [defaults objectForKey:@"dummyIATA"];
-    NSString *dummyICAO2 = [defaults objectForKey:@"dummyICAO"];
-    NSString *dummyOPERATOR2 = [defaults objectForKey:@"dummyOPERATOR"];
-    NSString *dummyTEMP2 = [defaults objectForKey:@"dummyTEMP"];
-    NSString *dummyWIND2 = [defaults objectForKey:@"dummyWIND"];
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    NSString *dummyIATA2 = [defaults objectForKey:@"dummyIATA"];
+//    NSString *dummyICAO2 = [defaults objectForKey:@"dummyICAO"];
+//    NSString *dummyOPERATOR2 = [defaults objectForKey:@"dummyOPERATOR"];
+//    NSString *dummyTEMP2 = [defaults objectForKey:@"dummyTEMP"];
+//    NSString *dummyWIND2 = [defaults objectForKey:@"dummyWIND"];
+    NSString *dummyIATA2 = [dictionary objectForKey:@"iata"];
+    NSString *dummyICAO2 = [dictionary objectForKey:@"icao"];
+    NSString *dummyOPERATOR2 = [dictionary objectForKey:@"operator"];
+    NSString *dummyTEMP2 = [dictionary objectForKey:@"temperature"];
+    NSString *dummyWIND2 = [dictionary objectForKey:@"wind"];
     
-    NSString *popupTitle = [NSString stringWithFormat:@"%@ (IATA : %@ , ICAO : %@)", arTitle, dummyIATA2, dummyICAO2];
+    NSString *popupTitle = [NSString stringWithFormat:@"%@ (IATA : %@ , ICAO : %@)", dictionary[@"title"], dummyIATA2, dummyICAO2];
     
     NSString *popupLineTwo = [NSString stringWithFormat:@"Operator: %@ (Temp : %@ , Wind : %@)", dummyOPERATOR2, dummyTEMP2, dummyWIND2];
     
@@ -66,10 +82,6 @@
     [button setTitle:@"Close Me" forState:UIControlStateNormal];
     button.backgroundColor = [UIColor colorWithRed:0.46 green:0.8 blue:1.0 alpha:1.0];
     button.layer.cornerRadius = 4;
-    button.selectionHandler = ^(CNPPopupButton *button){
-        [self.popupController dismissPopupControllerAnimated:YES];
-        NSLog(@"Block for button: %@", button.titleLabel.text);
-    };
     
     UILabel *titleLabel = [[UILabel alloc] init];
     titleLabel.numberOfLines = 0;
@@ -94,11 +106,18 @@
     textFied.placeholder = @"Custom view!";
     [customView addSubview:textFied];
     
-    self.popupController = [[CNPPopupController alloc] initWithContents:@[titleLabel, lineOneLabel, imageView, lineTwoLabel, customView, button]];
-    self.popupController.theme = [CNPPopupTheme defaultTheme];
-    self.popupController.theme.popupStyle = popupStyle;
-    self.popupController.delegate = self;
-    [self.popupController presentPopupControllerAnimated:YES];
+    CNPPopupController *popupController = [[CNPPopupController alloc] initWithContents:@[titleLabel, lineOneLabel, imageView, lineTwoLabel, customView, button]];
+    popupController.theme = [CNPPopupTheme defaultTheme];
+    popupController.theme.popupStyle = popupStyle;
+    
+    
+    
+    button.selectionHandler = ^(CNPPopupButton *button){
+        [popupController dismissPopupControllerAnimated:YES];
+        NSLog(@"Block for button: %@", button.titleLabel.text);
+    };
+    
+    return popupController;
 }
 
 #pragma mark - CNPPopupController Delegate

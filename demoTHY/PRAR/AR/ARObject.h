@@ -26,6 +26,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <CNPPopupController/CNPPopupController-umbrella.h>
 
 #import "ARSettings.h"
 
@@ -51,6 +52,9 @@
     
 }
 
+
+@property (nonatomic, strong) NSDictionary *dataDictionary;
+
 @property (nonatomic, strong) NSString *arTitle;
 @property (nonatomic, strong) NSNumber *distance;
 
@@ -60,5 +64,7 @@
 andCurrentLocation:(CLLocationCoordinate2D)currLoc;
 
 - (NSDictionary*)getARObjectData;
+
++ (CNPPopupController *)popupControllerWithDictionary: (NSDictionary *)dictionary style: (CNPPopupStyle)popupStyle;
 
 @end

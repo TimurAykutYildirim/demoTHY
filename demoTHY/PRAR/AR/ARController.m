@@ -68,6 +68,7 @@ CATransform3DMake(CGFloat m11, CGFloat m12, CGFloat m13, CGFloat m14,
                               andCurrentLocation:newLocation];
         
         x_pos = [self.locationMath getARObjectXPosition:arObject]-arObject.view.frame.size.width;
+        arObject.dataDictionary = arObjectData;
         
         geoobjectOverlays[ar_id] = arObject;
         geoobjectPositions[ar_id] = @(x_pos);

@@ -32,6 +32,9 @@
 #import "ARObject.h"
 #import "LocationMath.h"
 
+
+// ok, so you control it from here, right? it must be either this or prarmanager. i can@t remember now
+// ok, I'll figure it out then
 @implementation PRARManager
 
 #pragma mark - Life cycle

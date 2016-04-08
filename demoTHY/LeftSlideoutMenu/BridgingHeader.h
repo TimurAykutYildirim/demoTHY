@@ -10,5 +10,6 @@
 #define BridgingHeader_h
 
 #import <CNPPopupController/CNPPopupController-umbrella.h>
+#import <PRAR/PRAR.h>
 
 #endif /* BridgingHeader_h */

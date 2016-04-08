@@ -16,6 +16,8 @@ import CoreLocation
 */
 class FlightModel: MKPointAnnotation {
     
+    var popupDictionary : [String : AnyObject]?
+    
     weak var delegate : FirstViewController?
     
     var isPathVisible = false
@@ -32,7 +34,6 @@ class FlightModel: MKPointAnnotation {
 //    var fetchedCoordinates = [CLLocation]() // flight path
     var currentCoordinate : CLLocation? // current plane location
     
-    
     var planeDirection : CLLocationDirection?
     var previousMapPoint : MKMapPoint?
     weak var planeAnnotationView : MKAnnotationView? {
@@ -48,10 +49,15 @@ class FlightModel: MKPointAnnotation {
     
     
     func setup(title: String, groundSpeed: Double, fetchedCoordinates : [CLLocation], currentCoordinate : CLLocation) {
+        
+        // We'll only change the title here, right? act)ually it would be better if we can do the same as ar on here too.within popup only for planes id like KLM785
+        // let me find a code snippet. ok for popup snippet i can guide you
         self.title = title
         let minSpeed = 15.0
         self.groundSpeed = (groundSpeed > minSpeed) ? groundSpeed : minSpeed
         self.createNewPolylineWithCoorinates(fetchedCoordinates, currentPlaneCoordinate: currentCoordinate)
+        
+        
     }
     
     
