@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		161107637E9B89076526A17E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F61934D2EE93A1C845C99C4 /* Pods.framework */; };
+		394067B11CBBB21F001963BF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 394067AF1CBBB21F001963BF /* FBSDKCoreKit.framework */; };
+		394067B21CBBB21F001963BF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 394067B01CBBB21F001963BF /* FBSDKLoginKit.framework */; };
+		394067B41CBBCAED001963BF /* LeftPanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394067B31CBBCAED001963BF /* LeftPanViewController.swift */; };
+		394067B61CBBD2D4001963BF /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 394067B51CBBD2D4001963BF /* fontawesome-webfont.ttf */; };
 		3971793A1CB5772700B1BBD8 /* FlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397179391CB5772700B1BBD8 /* FlightModel.swift */; };
 		3971793E1CB57DCD00B1BBD8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3971793D1CB57DCD00B1BBD8 /* Pods.framework */; };
 		397179401CB584A400B1BBD8 /* airplane.png in Resources */ = {isa = PBXBuildFile; fileRef = 3971793F1CB584A400B1BBD8 /* airplane.png */; };
@@ -49,9 +53,6 @@
 		D14219D81C7B3E26006A6865 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14219D71C7B3E26006A6865 /* UIKit.framework */; };
 		D14219DA1C7B3E34006A6865 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14219D91C7B3E34006A6865 /* CoreGraphics.framework */; };
 		D14219DC1C7B3E46006A6865 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14219DB1C7B3E46006A6865 /* Foundation.framework */; };
-		D1570E4C1C7245BA00B34F01 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1570E491C7245BA00B34F01 /* FBSDKCoreKit.framework */; };
-		D1570E4D1C7245BA00B34F01 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1570E4A1C7245BA00B34F01 /* FBSDKLoginKit.framework */; };
-		D1570E4E1C7245BA00B34F01 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1570E4B1C7245BA00B34F01 /* FBSDKShareKit.framework */; };
 		D1570E501C72460000B34F01 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1570E4F1C72460000B34F01 /* LoginVC.swift */; };
 		FCDFC0851B2F7F110015115E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDFC0841B2F7F110015115E /* AppDelegate.swift */; };
 		FCDFC0871B2F7F110015115E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDFC0861B2F7F110015115E /* FirstViewController.swift */; };
@@ -111,6 +112,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		394067AF1CBBB21F001963BF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		394067B01CBBB21F001963BF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		394067B31CBBCAED001963BF /* LeftPanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftPanViewController.swift; sourceTree = "<group>"; };
+		394067B51CBBD2D4001963BF /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		397179391CB5772700B1BBD8 /* FlightModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightModel.swift; sourceTree = "<group>"; };
 		3971793B1CB579ED00B1BBD8 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		3971793C1CB57D4B00B1BBD8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -150,9 +155,6 @@
 		D14219D71C7B3E26006A6865 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D14219D91C7B3E34006A6865 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D14219DB1C7B3E46006A6865 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D1570E491C7245BA00B34F01 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		D1570E4A1C7245BA00B34F01 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		D1570E4B1C7245BA00B34F01 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		D1570E4F1C72460000B34F01 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		ED62C2C971469C16DFCE9B39 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FCDFC07F1B2F7F110015115E /* demoTHY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demoTHY.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,12 +194,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1570E4D1C7245BA00B34F01 /* FBSDKLoginKit.framework in Frameworks */,
-				D1570E4C1C7245BA00B34F01 /* FBSDKCoreKit.framework in Frameworks */,
-				D1570E4E1C7245BA00B34F01 /* FBSDKShareKit.framework in Frameworks */,
 				D14219D81C7B3E26006A6865 /* UIKit.framework in Frameworks */,
+				394067B11CBBB21F001963BF /* FBSDKCoreKit.framework in Frameworks */,
 				D14219DA1C7B3E34006A6865 /* CoreGraphics.framework in Frameworks */,
 				D14219DC1C7B3E46006A6865 /* Foundation.framework in Frameworks */,
+				394067B21CBBB21F001963BF /* FBSDKLoginKit.framework in Frameworks */,
 				D14219A61C7B3C37006A6865 /* PRAR.framework in Frameworks */,
 				161107637E9B89076526A17E /* Pods.framework in Frameworks */,
 			);
@@ -314,16 +315,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D14219DE1C7B3E82006A6865 /* FBSDK */ = {
-			isa = PBXGroup;
-			children = (
-				D1570E491C7245BA00B34F01 /* FBSDKCoreKit.framework */,
-				D1570E4A1C7245BA00B34F01 /* FBSDKLoginKit.framework */,
-				D1570E4B1C7245BA00B34F01 /* FBSDKShareKit.framework */,
-			);
-			name = FBSDK;
-			sourceTree = "<group>";
-		};
 		FCDFC0761B2F7F110015115E = {
 			isa = PBXGroup;
 			children = (
@@ -353,7 +344,10 @@
 			children = (
 				39C4564F1CB7BDAD00DAF578 /* images */,
 				3971793F1CB584A400B1BBD8 /* airplane.png */,
-				D14219DE1C7B3E82006A6865 /* FBSDK */,
+				394067B51CBBD2D4001963BF /* fontawesome-webfont.ttf */,
+				FCDFC08F1B2F7F120015115E /* LaunchScreen.xib */,
+				FCDFC08A1B2F7F110015115E /* Main.storyboard */,
+				FCDFC08D1B2F7F120015115E /* Images.xcassets */,
 				FCDFC0841B2F7F110015115E /* AppDelegate.swift */,
 				FCDFC0A61B2F87B00015115E /* ContainerVC.swift */,
 				FCDFC0861B2F7F110015115E /* FirstViewController.swift */,
@@ -361,13 +355,13 @@
 				FCE2F37E1B724C4D00773729 /* TabVCTemplate.swift */,
 				D1570E4F1C72460000B34F01 /* LoginVC.swift */,
 				FCE2F37C1B724B6B00773729 /* ModalWindow.swift */,
-				FCDFC08A1B2F7F110015115E /* Main.storyboard */,
-				FCDFC08D1B2F7F120015115E /* Images.xcassets */,
-				FCDFC08F1B2F7F120015115E /* LaunchScreen.xib */,
-				FCDFC0821B2F7F110015115E /* Supporting Files */,
+				394067B31CBBCAED001963BF /* LeftPanViewController.swift */,
 				397179391CB5772700B1BBD8 /* FlightModel.swift */,
 				3971793B1CB579ED00B1BBD8 /* BridgingHeader.h */,
 				3971793C1CB57D4B00B1BBD8 /* PrefixHeader.pch */,
+				FCDFC0821B2F7F110015115E /* Supporting Files */,
+				394067AF1CBBB21F001963BF /* FBSDKCoreKit.framework */,
+				394067B01CBBB21F001963BF /* FBSDKLoginKit.framework */,
 			);
 			path = LeftSlideoutMenu;
 			sourceTree = "<group>";
@@ -574,6 +568,7 @@
 				39D4F30A1CB7EDF2007589B0 /* 11.jpg in Resources */,
 				FCDFC08C1B2F7F110015115E /* Main.storyboard in Resources */,
 				FCDFC0911B2F7F120015115E /* LaunchScreen.xib in Resources */,
+				394067B61CBBD2D4001963BF /* fontawesome-webfont.ttf in Resources */,
 				FCDFC08E1B2F7F120015115E /* Images.xcassets in Resources */,
 				397179401CB584A400B1BBD8 /* airplane.png in Resources */,
 				D1246D551C805CC500440A64 /* ARObject.xib in Resources */,
@@ -676,6 +671,7 @@
 				FCDFC0891B2F7F110015115E /* SecondViewController.swift in Sources */,
 				D1570E501C72460000B34F01 /* LoginVC.swift in Sources */,
 				3971793A1CB5772700B1BBD8 /* FlightModel.swift in Sources */,
+				394067B41CBBCAED001963BF /* LeftPanViewController.swift in Sources */,
 				FCE2F37D1B724B6B00773729 /* ModalWindow.swift in Sources */,
 				FCE2F37F1B724C4D00773729 /* TabVCTemplate.swift in Sources */,
 				FCDFC0851B2F7F110015115E /* AppDelegate.swift in Sources */,

@@ -41,7 +41,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         // MARK: API REQUEST AND PLANE PROJECTION RELATED STUFF
         
         // Let's add more flights!
-        let flights = ["TAP203"] 
+        let flights = ["DAL186"] 
         for flight in flights {
             apiRequest(flight)
         }

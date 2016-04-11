@@ -78,7 +78,7 @@
         <!--ContainerVC-->
         <scene sceneID="GSf-fk-48E">
             <objects>
-                <viewController id="4NJ-o1-zZ9" customClass="ContainerVC" customModule="demoTHY" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContainerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4NJ-o1-zZ9" customClass="ContainerVC" customModule="demoTHY" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hLD-w6-MfO"/>
                         <viewControllerLayoutGuide type="bottom" id="tM1-tl-GF1"/>
@@ -158,7 +158,7 @@
                     <view key="view" contentMode="scaleToFill" id="e1X-9p-uyc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <segue destination="4NJ-o1-zZ9" kind="modal" identifier="redirectAfterLogin" id="w2e-0t-GP5"/>
@@ -168,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="-776" y="-1058"/>
         </scene>
-        <!--View Controller-->
+        <!--Left Pan View Controller-->
         <scene sceneID="puR-lF-MzN">
             <objects>
-                <viewController id="jjg-FI-Dib" sceneMemberID="viewController">
+                <viewController id="jjg-FI-Dib" customClass="LeftPanViewController" customModule="demoTHY" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u6g-lO-134"/>
                         <viewControllerLayoutGuide type="bottom" id="Jwx-Wo-8Fc"/>
@@ -180,15 +180,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="260" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="buraya sol pan içerikleri gelecek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMP-2A-H9B">
-                                <rect key="frame" x="8" y="20" width="245" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSR-pr-xXP">
+                                <rect key="frame" x="66" y="20" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="Y90-Yb-PFX"/>
+                                    <constraint firstAttribute="height" constant="128" id="f1f-03-urd"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XSR-pr-xXP" firstAttribute="leading" secondItem="rCr-gU-4Je" secondAttribute="leadingMargin" constant="46" id="587-YB-SN5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XSR-pr-xXP" secondAttribute="trailing" constant="46" id="D5l-xJ-MpR"/>
+                            <constraint firstItem="XSR-pr-xXP" firstAttribute="top" secondItem="u6g-lO-134" secondAttribute="bottom" constant="20" id="aup-gt-pgd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="profilePic" destination="XSR-pr-xXP" id="wyM-Ek-u6S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ih-EE-XBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -331,6 +340,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4uO-pj-oaV"/>
+        <segue reference="Q8K-VK-t7D"/>
     </inferredMetricsTieBreakers>
 </document>
