@@ -19,6 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CNPPopupControllerDelegat
         // Override point for customization after application launch.
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
+        // ContainerVC
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        if FBSDKAccessToken.currentAccessToken() != nil {
+            self.window?.rootViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ContainerVC")
+        } else {
+            self.window?.rootViewController = mainStoryboard.instantiateInitialViewController()
+        }
+        print(self.window)
+        print(self.window?.rootViewController)
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
     

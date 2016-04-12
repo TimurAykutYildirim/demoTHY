@@ -85,9 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/CNPPopupController.framework"
+  install_framework "Pods/Font_Awesome_Swift.framework"
   install_framework "Pods/KASlideShow.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/CNPPopupController.framework"
+  install_framework "Pods/Font_Awesome_Swift.framework"
   install_framework "Pods/KASlideShow.framework"
 fi

@@ -11,10 +11,10 @@
 		394067B11CBBB21F001963BF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 394067AF1CBBB21F001963BF /* FBSDKCoreKit.framework */; };
 		394067B21CBBB21F001963BF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 394067B01CBBB21F001963BF /* FBSDKLoginKit.framework */; };
 		394067B41CBBCAED001963BF /* LeftPanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394067B31CBBCAED001963BF /* LeftPanViewController.swift */; };
-		394067B61CBBD2D4001963BF /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 394067B51CBBD2D4001963BF /* fontawesome-webfont.ttf */; };
 		3971793A1CB5772700B1BBD8 /* FlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397179391CB5772700B1BBD8 /* FlightModel.swift */; };
 		3971793E1CB57DCD00B1BBD8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3971793D1CB57DCD00B1BBD8 /* Pods.framework */; };
 		397179401CB584A400B1BBD8 /* airplane.png in Resources */ = {isa = PBXBuildFile; fileRef = 3971793F1CB584A400B1BBD8 /* airplane.png */; };
+		397EAC6C1CBD0B9400D49E7D /* UIViewController+RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397EAC6B1CBD0B9400D49E7D /* UIViewController+RootViewController.swift */; };
 		39D4F3051CB7D0C2007589B0 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D4F3021CB7D0C2007589B0 /* 1.png */; };
 		39D4F3061CB7D0C2007589B0 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39D4F3031CB7D0C2007589B0 /* 2.jpg */; };
 		39D4F3071CB7D0C2007589B0 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39D4F3041CB7D0C2007589B0 /* 3.jpg */; };
@@ -115,12 +115,12 @@
 		394067AF1CBBB21F001963BF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		394067B01CBBB21F001963BF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		394067B31CBBCAED001963BF /* LeftPanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftPanViewController.swift; sourceTree = "<group>"; };
-		394067B51CBBD2D4001963BF /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		397179391CB5772700B1BBD8 /* FlightModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightModel.swift; sourceTree = "<group>"; };
 		3971793B1CB579ED00B1BBD8 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		3971793C1CB57D4B00B1BBD8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3971793D1CB57DCD00B1BBD8 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
 		3971793F1CB584A400B1BBD8 /* airplane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = airplane.png; path = ../../../../../Downloads/ucak_icon/airplane.png; sourceTree = "<group>"; };
+		397EAC6B1CBD0B9400D49E7D /* UIViewController+RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RootViewController.swift"; sourceTree = "<group>"; };
 		39D4F3021CB7D0C2007589B0 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		39D4F3031CB7D0C2007589B0 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		39D4F3041CB7D0C2007589B0 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
@@ -344,7 +344,6 @@
 			children = (
 				39C4564F1CB7BDAD00DAF578 /* images */,
 				3971793F1CB584A400B1BBD8 /* airplane.png */,
-				394067B51CBBD2D4001963BF /* fontawesome-webfont.ttf */,
 				FCDFC08F1B2F7F120015115E /* LaunchScreen.xib */,
 				FCDFC08A1B2F7F110015115E /* Main.storyboard */,
 				FCDFC08D1B2F7F120015115E /* Images.xcassets */,
@@ -362,6 +361,7 @@
 				FCDFC0821B2F7F110015115E /* Supporting Files */,
 				394067AF1CBBB21F001963BF /* FBSDKCoreKit.framework */,
 				394067B01CBBB21F001963BF /* FBSDKLoginKit.framework */,
+				397EAC6B1CBD0B9400D49E7D /* UIViewController+RootViewController.swift */,
 			);
 			path = LeftSlideoutMenu;
 			sourceTree = "<group>";
@@ -568,7 +568,6 @@
 				39D4F30A1CB7EDF2007589B0 /* 11.jpg in Resources */,
 				FCDFC08C1B2F7F110015115E /* Main.storyboard in Resources */,
 				FCDFC0911B2F7F120015115E /* LaunchScreen.xib in Resources */,
-				394067B61CBBD2D4001963BF /* fontawesome-webfont.ttf in Resources */,
 				FCDFC08E1B2F7F120015115E /* Images.xcassets in Resources */,
 				397179401CB584A400B1BBD8 /* airplane.png in Resources */,
 				D1246D551C805CC500440A64 /* ARObject.xib in Resources */,
@@ -672,6 +671,7 @@
 				D1570E501C72460000B34F01 /* LoginVC.swift in Sources */,
 				3971793A1CB5772700B1BBD8 /* FlightModel.swift in Sources */,
 				394067B41CBBCAED001963BF /* LeftPanViewController.swift in Sources */,
+				397EAC6C1CBD0B9400D49E7D /* UIViewController+RootViewController.swift in Sources */,
 				FCE2F37D1B724B6B00773729 /* ModalWindow.swift in Sources */,
 				FCE2F37F1B724C4D00773729 /* TabVCTemplate.swift in Sources */,
 				FCDFC0851B2F7F110015115E /* AppDelegate.swift in Sources */,

@@ -7,11 +7,23 @@
 //
 
 import UIKit
+import Font_Awesome_Swift
 
 class LeftPanViewController: UIViewController {
 
     @IBOutlet var profilePic: UIImageView!
+    @IBOutlet var pointsIcon: UILabel!
 
+    @IBOutlet var pointsLabel: UILabel!
+    
+    @IBOutlet var LogoutButton: UIButton!
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +39,10 @@ class LeftPanViewController: UIViewController {
             profilePic.contentMode = .ScaleAspectFit
             downloadImage(checkedUrl)
         }
+        
+        LogoutButton.setFAIcon(FAType.FASignOut, forState: .Normal)
+        LogoutButton.setFATitleColor(UIColor.redColor(), forState: .Normal)
+        LogoutButton.setFAText(prefixText: "", icon: FAType.FASignOut, postfixText: "", size: 25, forState: .Normal, iconSize: 30)
 
     }
     
@@ -50,7 +66,14 @@ class LeftPanViewController: UIViewController {
             }
         }
     }
+    
 
+    @IBAction func logoutAction(sender: AnyObject) {
+        FBSDKLoginManager().logOut()
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        vc?.changeWindowRootToSelfAnimatedCompletion({ () -> Void in
+        })
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

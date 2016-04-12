@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0D3508F5B5609B44AB1BAA35'
+               BlueprintIdentifier = 'E7CA8979730524205126EAA3'
                BlueprintName = 'CNPPopupController'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'CNPPopupController.framework'>

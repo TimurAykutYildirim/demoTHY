@@ -6,3 +6,4 @@ link_with 'demoTHY'
 
 pod 'CNPPopupController'
 pod 'KASlideShow'
+pod 'Font-Awesome-Swift', '~> 1.4.7'

@@ -30,21 +30,12 @@ class LoginVC: UIViewController, KASlideShowDelegate, FBSDKLoginButtonDelegate  
         slideshow.addImagesFromResources(["1.png", "2.jpg", "3.jpg"]) // Add images from resources
         slideshow.addGesture(KASlideShowGestureType.All) // Gesture to go previous/next directly on the image }
         slideshow.start()
-        view.addSubview(slideshow)
+        //view.addSubview(slideshow)
         
         view.addSubview(loginButton)
         loginButton.center = view.center
         loginButton.readPermissions = ["public_profile", "email", "user_friends"]
         loginButton.delegate = self // Remember to set the delegate of the loginButton
-        
-        if let token = FBSDKAccessToken.currentAccessToken() {
-            fetchProfile()
-        }
-        
-        if FBSDKAccessToken.currentAccessToken() != nil {
-            print("1")
-            self.performSegueWithIdentifier("redirectAfterLogin", sender: self)
-        }
         
         /************************/
         

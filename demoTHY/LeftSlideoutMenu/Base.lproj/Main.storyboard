@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -145,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w0f-We-LMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-64" y="-1058"/>
+            <point key="canvasLocation" x="78" y="-1058"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="Hem-rK-bVx">
@@ -180,22 +181,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="260" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSR-pr-xXP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XSR-pr-xXP">
                                 <rect key="frame" x="66" y="20" width="128" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="128" id="Y90-Yb-PFX"/>
+                                    <constraint firstAttribute="width" secondItem="XSR-pr-xXP" secondAttribute="height" multiplier="1:1" id="IkY-kl-QKc"/>
                                     <constraint firstAttribute="height" constant="128" id="f1f-03-urd"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DO7-aX-rUM">
+                                <rect key="frame" x="66" y="156" width="63" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJK-tC-bOa">
+                                <rect key="frame" x="131" y="156" width="63" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2QU-Ky-FEH">
+                                <rect key="frame" x="198" y="518" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="logoutAction:" destination="jjg-FI-Dib" eventType="touchUpInside" id="IPk-ZV-RWW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XSR-pr-xXP" firstAttribute="leading" secondItem="rCr-gU-4Je" secondAttribute="leadingMargin" constant="46" id="587-YB-SN5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XSR-pr-xXP" secondAttribute="trailing" constant="46" id="D5l-xJ-MpR"/>
+                            <constraint firstItem="2QU-Ky-FEH" firstAttribute="trailing" secondItem="rCr-gU-4Je" secondAttribute="trailingMargin" id="10E-sS-UzC"/>
+                            <constraint firstItem="XSR-pr-xXP" firstAttribute="centerX" secondItem="rCr-gU-4Je" secondAttribute="centerX" id="3Tb-2O-Pbe"/>
+                            <constraint firstItem="oJK-tC-bOa" firstAttribute="top" secondItem="XSR-pr-xXP" secondAttribute="bottom" constant="8" id="LpE-W5-1Gf"/>
+                            <constraint firstItem="oJK-tC-bOa" firstAttribute="width" secondItem="DO7-aX-rUM" secondAttribute="width" id="Ofa-EA-qhv"/>
+                            <constraint firstItem="oJK-tC-bOa" firstAttribute="leading" secondItem="DO7-aX-rUM" secondAttribute="trailing" constant="2" id="Pma-du-Vtj"/>
+                            <constraint firstItem="oJK-tC-bOa" firstAttribute="trailing" secondItem="XSR-pr-xXP" secondAttribute="trailing" id="RgW-pi-fWx"/>
+                            <constraint firstItem="DO7-aX-rUM" firstAttribute="top" secondItem="XSR-pr-xXP" secondAttribute="bottom" constant="8" id="UHG-Oc-YjV"/>
+                            <constraint firstItem="Jwx-Wo-8Fc" firstAttribute="top" secondItem="2QU-Ky-FEH" secondAttribute="bottom" constant="20" id="YCN-7M-iiW"/>
                             <constraint firstItem="XSR-pr-xXP" firstAttribute="top" secondItem="u6g-lO-134" secondAttribute="bottom" constant="20" id="aup-gt-pgd"/>
+                            <constraint firstItem="oJK-tC-bOa" firstAttribute="leading" secondItem="DO7-aX-rUM" secondAttribute="trailing" constant="2" id="ctg-bY-v0j"/>
+                            <constraint firstItem="DO7-aX-rUM" firstAttribute="leading" secondItem="XSR-pr-xXP" secondAttribute="leading" id="wMv-qm-oea"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="LogoutButton" destination="2QU-Ky-FEH" id="7jD-tH-pd0"/>
+                        <outlet property="pointsIcon" destination="DO7-aX-rUM" id="G3N-qW-JeY"/>
+                        <outlet property="pointsLabel" destination="oJK-tC-bOa" id="VMY-Oz-Jof"/>
                         <outlet property="profilePic" destination="XSR-pr-xXP" id="wyM-Ek-u6S"/>
                     </connections>
                 </viewController>
