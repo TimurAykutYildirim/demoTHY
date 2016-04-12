@@ -18,8 +18,13 @@ class LeftPanViewController: UIViewController {
     
     @IBOutlet var LogoutButton: UIButton!
     
+    @IBOutlet var CreditCardButton: UIButton!
     
+    @IBOutlet var TicketSaleButton: UIButton!
     
+    @IBOutlet var PromotionsButton: UIButton!
+    
+    @IBOutlet var ShareButton: UIButton!
     
     
     
@@ -29,9 +34,9 @@ class LeftPanViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        profilePic.layer.borderWidth = 1
+        profilePic.layer.borderWidth = 3
         profilePic.layer.masksToBounds = false
-        profilePic.layer.borderColor = UIColor.blackColor().CGColor
+        profilePic.layer.borderColor = UIColor.redColor().CGColor
         profilePic.layer.cornerRadius = profilePic.frame.height/2
         profilePic.clipsToBounds = true
         var picURL : String = NSUserDefaults.standardUserDefaults().objectForKey("url") as! String
@@ -40,9 +45,32 @@ class LeftPanViewController: UIViewController {
             downloadImage(checkedUrl)
         }
         
-        LogoutButton.setFAIcon(FAType.FASignOut, forState: .Normal)
+        LogoutButton.setFAIcon(FAType.FASignOut, iconSize: 30, forState: .Normal)
         LogoutButton.setFATitleColor(UIColor.redColor(), forState: .Normal)
-        LogoutButton.setFAText(prefixText: "", icon: FAType.FASignOut, postfixText: "", size: 25, forState: .Normal, iconSize: 30)
+        //LogoutButton.setFAText(prefixText: "", icon: FAType.FASignOut, postfixText: "", size: 25, forState: .Normal, iconSize: 30)
+        pointsIcon.setFAIcon(FAType.FAStar, iconSize: 30)
+        pointsIcon.setFAColor(UIColor.redColor())
+        
+        var alignment = UIControlContentHorizontalAlignment.Left
+        CreditCardButton.setFAIcon(FAType.FACreditCard, iconSize: 20, forState: .Normal)
+        CreditCardButton.setFAText(prefixText: "", icon: FAType.FACreditCard, postfixText: " M&S Kartım", size: 20, forState: .Normal)
+        CreditCardButton.setFATitleColor(UIColor.redColor(), forState: .Normal)
+        CreditCardButton.contentHorizontalAlignment = alignment;
+        
+        TicketSaleButton.setFAIcon(FAType.FATicket, iconSize: 20, forState: .Normal)
+        TicketSaleButton.setFAText(prefixText: "", icon: FAType.FATicket, postfixText: " Bilet Al", size: 20, forState: .Normal)
+        TicketSaleButton.setFATitleColor(UIColor.redColor(), forState: .Normal)
+        TicketSaleButton.contentHorizontalAlignment = alignment;
+        
+        PromotionsButton.setFAIcon(FAType.FAGift, iconSize: 20, forState: .Normal)
+        PromotionsButton.setFAText(prefixText: "", icon: FAType.FAGift, postfixText: " Promosyonlar", size: 20, forState: .Normal)
+        PromotionsButton.setFATitleColor(UIColor.redColor(), forState: .Normal)
+        PromotionsButton.contentHorizontalAlignment = alignment;
+        
+        ShareButton.setFAIcon(FAType.FAShareAlt, iconSize: 20, forState: .Normal)
+        ShareButton.setFAText(prefixText: "", icon: FAType.FAShareAlt, postfixText: " Paylaş", size: 20, forState: .Normal)
+        ShareButton.setFATitleColor(UIColor.redColor(), forState: .Normal)
+        ShareButton.contentHorizontalAlignment = alignment;
 
     }
     
