@@ -39,8 +39,8 @@ class LeftPanViewController: UIViewController {
         profilePic.layer.borderColor = UIColor.redColor().CGColor
         profilePic.layer.cornerRadius = profilePic.frame.height/2
         profilePic.clipsToBounds = true
-        var picURL : String = NSUserDefaults.standardUserDefaults().objectForKey("url") as! String
-        if let checkedUrl = NSURL(string: picURL) {
+        if let picURL : String = NSUserDefaults.standardUserDefaults().objectForKey("url") as? String,
+            let checkedUrl = NSURL(string: picURL) {
             profilePic.contentMode = .ScaleAspectFit
             downloadImage(checkedUrl)
         }
@@ -51,7 +51,7 @@ class LeftPanViewController: UIViewController {
         pointsIcon.setFAIcon(FAType.FAStar, iconSize: 30)
         pointsIcon.setFAColor(UIColor.redColor())
         
-        var alignment = UIControlContentHorizontalAlignment.Left
+        let alignment = UIControlContentHorizontalAlignment.Left
         CreditCardButton.setFAIcon(FAType.FACreditCard, iconSize: 20, forState: .Normal)
         CreditCardButton.setFAText(prefixText: "", icon: FAType.FACreditCard, postfixText: " M&S Kartım", size: 20, forState: .Normal)
         CreditCardButton.setFATitleColor(UIColor.redColor(), forState: .Normal)

@@ -15,11 +15,12 @@
 		3971793E1CB57DCD00B1BBD8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3971793D1CB57DCD00B1BBD8 /* Pods.framework */; };
 		397179401CB584A400B1BBD8 /* airplane.png in Resources */ = {isa = PBXBuildFile; fileRef = 3971793F1CB584A400B1BBD8 /* airplane.png */; };
 		397EAC6C1CBD0B9400D49E7D /* UIViewController+RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397EAC6B1CBD0B9400D49E7D /* UIViewController+RootViewController.swift */; };
+		39B660221CBD49CC00DDBE79 /* adversionyellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B660201CBD49CC00DDBE79 /* adversionyellow.png */; };
+		39B660231CBD49CC00DDBE79 /* adversion_beyin.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B660211CBD49CC00DDBE79 /* adversion_beyin.png */; };
 		39D4F3051CB7D0C2007589B0 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D4F3021CB7D0C2007589B0 /* 1.png */; };
 		39D4F3061CB7D0C2007589B0 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39D4F3031CB7D0C2007589B0 /* 2.jpg */; };
 		39D4F3071CB7D0C2007589B0 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39D4F3041CB7D0C2007589B0 /* 3.jpg */; };
-		39D4F30A1CB7EDF2007589B0 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39D4F3081CB7EDF2007589B0 /* 11.jpg */; };
-		39D4F30B1CB7EDF2007589B0 /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39D4F3091CB7EDF2007589B0 /* 22.jpg */; };
+		39E9C47F1CC7B43B00295809 /* THYTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9C47E1CC7B43B00295809 /* THYTabBarController.swift */; };
 		D1246D551C805CC500440A64 /* ARObject.xib in Resources */ = {isa = PBXBuildFile; fileRef = D14219B51C7B3C72006A6865 /* ARObject.xib */; };
 		D1246D561C805CC500440A64 /* ar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D14219B81C7B3C72006A6865 /* ar_icon.png */; };
 		D1246D571C805CC500440A64 /* ar_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = D14219B91C7B3C72006A6865 /* ar_overlay.png */; };
@@ -121,11 +122,12 @@
 		3971793D1CB57DCD00B1BBD8 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
 		3971793F1CB584A400B1BBD8 /* airplane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = airplane.png; path = ../../../../../Downloads/ucak_icon/airplane.png; sourceTree = "<group>"; };
 		397EAC6B1CBD0B9400D49E7D /* UIViewController+RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RootViewController.swift"; sourceTree = "<group>"; };
+		39B660201CBD49CC00DDBE79 /* adversionyellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adversionyellow.png; sourceTree = "<group>"; };
+		39B660211CBD49CC00DDBE79 /* adversion_beyin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adversion_beyin.png; sourceTree = "<group>"; };
 		39D4F3021CB7D0C2007589B0 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		39D4F3031CB7D0C2007589B0 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		39D4F3041CB7D0C2007589B0 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
-		39D4F3081CB7EDF2007589B0 /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
-		39D4F3091CB7EDF2007589B0 /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
+		39E9C47E1CC7B43B00295809 /* THYTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THYTabBarController.swift; sourceTree = "<group>"; };
 		4F61934D2EE93A1C845C99C4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA761386C2F7D168CA5F5BF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D14219911C7B3C37006A6865 /* PRAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PRAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,8 +219,8 @@
 		39C4564F1CB7BDAD00DAF578 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				39D4F3081CB7EDF2007589B0 /* 11.jpg */,
-				39D4F3091CB7EDF2007589B0 /* 22.jpg */,
+				39B660201CBD49CC00DDBE79 /* adversionyellow.png */,
+				39B660211CBD49CC00DDBE79 /* adversion_beyin.png */,
 				39D4F3021CB7D0C2007589B0 /* 1.png */,
 				39D4F3031CB7D0C2007589B0 /* 2.jpg */,
 				39D4F3041CB7D0C2007589B0 /* 3.jpg */,
@@ -362,6 +364,7 @@
 				394067AF1CBBB21F001963BF /* FBSDKCoreKit.framework */,
 				394067B01CBBB21F001963BF /* FBSDKLoginKit.framework */,
 				397EAC6B1CBD0B9400D49E7D /* UIViewController+RootViewController.swift */,
+				39E9C47E1CC7B43B00295809 /* THYTabBarController.swift */,
 			);
 			path = LeftSlideoutMenu;
 			sourceTree = "<group>";
@@ -565,16 +568,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39D4F30A1CB7EDF2007589B0 /* 11.jpg in Resources */,
 				FCDFC08C1B2F7F110015115E /* Main.storyboard in Resources */,
 				FCDFC0911B2F7F120015115E /* LaunchScreen.xib in Resources */,
 				FCDFC08E1B2F7F120015115E /* Images.xcassets in Resources */,
+				39B660221CBD49CC00DDBE79 /* adversionyellow.png in Resources */,
 				397179401CB584A400B1BBD8 /* airplane.png in Resources */,
 				D1246D551C805CC500440A64 /* ARObject.xib in Resources */,
 				39D4F3071CB7D0C2007589B0 /* 3.jpg in Resources */,
+				39B660231CBD49CC00DDBE79 /* adversion_beyin.png in Resources */,
 				D1246D561C805CC500440A64 /* ar_icon.png in Resources */,
 				D1246D571C805CC500440A64 /* ar_overlay.png in Resources */,
-				39D4F30B1CB7EDF2007589B0 /* 22.jpg in Resources */,
 				D1246D581C805CC500440A64 /* ar_overlay@2x.png in Resources */,
 				D1246D591C805CC500440A64 /* Radar.png in Resources */,
 				39D4F3061CB7D0C2007589B0 /* 2.jpg in Resources */,
@@ -668,6 +671,7 @@
 			files = (
 				FCDFC0A71B2F87B00015115E /* ContainerVC.swift in Sources */,
 				FCDFC0891B2F7F110015115E /* SecondViewController.swift in Sources */,
+				39E9C47F1CC7B43B00295809 /* THYTabBarController.swift in Sources */,
 				D1570E501C72460000B34F01 /* LoginVC.swift in Sources */,
 				3971793A1CB5772700B1BBD8 /* FlightModel.swift in Sources */,
 				394067B41CBBCAED001963BF /* LeftPanViewController.swift in Sources */,

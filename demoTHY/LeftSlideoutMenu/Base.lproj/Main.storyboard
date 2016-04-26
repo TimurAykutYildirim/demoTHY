@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9Ng-M6-lV3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9Ng-M6-lV3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -34,11 +34,30 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ptt-rw-ycp">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="3rf-lC-PsM">
                             <connections>
                                 <action selector="toggleMenu:" destination="9pv-A4-QxB" id="1o1-yN-sQd"/>
                             </connections>
                         </barButtonItem>
+                        <view key="titleView" contentMode="scaleToFill" id="Vq7-TM-oYn">
+                            <rect key="frame" x="170.5" y="5.5" width="227" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVg-qz-YSR">
+                                    <rect key="frame" x="27" y="0.0" width="46" height="30"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1X-vv-tO7">
+                                    <rect key="frame" x="133" y="0.0" width="46" height="30"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="changeToSecondTabBarItemPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Kos-Hi-W4x"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="fgo-xc-Mfb" id="Izs-vV-Zwa"/>
@@ -62,11 +81,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                     <navigationItem key="navigationItem" id="SeM-rt-Pue">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="QFJ-MI-bFE">
                             <connections>
                                 <action selector="toggleMenu:" destination="8rJ-Kc-sve" id="Gec-jK-vWa"/>
                             </connections>
                         </barButtonItem>
+                        <view key="titleView" contentMode="scaleToFill" id="mua-MI-5ZE">
+                            <rect key="frame" x="170.5" y="5.5" width="227" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLV-3Q-jCD">
+                                    <rect key="frame" x="27" y="0.0" width="46" height="30"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="switchTabBarToFirstPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="meW-yP-pqz"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBK-zW-Jo2">
+                                    <rect key="frame" x="133" y="0.0" width="46" height="30"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
                     </navigationItem>
                     <connections>
                         <segue destination="Res-mf-cx8" kind="push" identifier="openPushWindow" id="4uO-pj-oaV"/>
@@ -315,7 +353,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="THYTabBarController" customModule="demoTHY" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -395,7 +433,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="flo-xF-Y3q" secondAttribute="trailing" id="m2N-fb-ran"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tFM-MV-REc"/>
+                    <navigationItem key="navigationItem" id="tFM-MV-REc">
+                        <nil key="title"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxI-Op-DRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

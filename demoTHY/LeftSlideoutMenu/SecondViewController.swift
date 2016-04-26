@@ -94,5 +94,10 @@ class SecondViewController: UIViewController, PRARManagerDelegate {
         //print("20")
     }
     
+    
+    @IBAction func switchTabBarToFirstPressed(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName("switchTabBar", object: nil, userInfo: ["item" : 0])
+    }
+    
 }
 
