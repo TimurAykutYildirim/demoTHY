@@ -8,10 +8,21 @@ let y = Int(x)
 
 class SecondViewController: UIViewController, PRARManagerDelegate {
 
+    @IBOutlet var logoButton: UIButton!
+    @IBOutlet var leftButton: UIButton!
+    @IBOutlet var rightButton: UIButton!
+    
     func alert(title: String, withDetails details: String) {
         //print("alert function")
         let alert: UIAlertView = UIAlertView(title: title, message: details, delegate: nil, cancelButtonTitle: "Ok", otherButtonTitles: "")
         alert.show()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+        logoButton.setImage(UIImage(named: "skylance.png"), forState: .Normal)
+        leftButton.setFAIcon(FAType.FAMap, forState: .Normal)
+        rightButton.setFAIcon(FAType.FABinoculars, forState: .Normal)
     }
     
     override func viewDidLoad() {

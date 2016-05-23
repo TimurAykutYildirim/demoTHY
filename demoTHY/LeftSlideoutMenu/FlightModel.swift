@@ -55,6 +55,8 @@ class FlightModel: MKPointAnnotation {
         self.title = title
         let minSpeed = 15.0
         self.groundSpeed = (groundSpeed > minSpeed) ? groundSpeed : minSpeed
+        
+        // fetchedCoordinates contains waypoints
         self.createNewPolylineWithCoorinates(fetchedCoordinates, currentPlaneCoordinate: currentCoordinate)
         
         

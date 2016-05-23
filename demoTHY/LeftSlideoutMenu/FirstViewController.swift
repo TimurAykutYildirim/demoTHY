@@ -28,14 +28,26 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     var type2 = String()
     var ident2 = String()
     
-    
+    @IBOutlet var navBar: UINavigationItem!
+    @IBOutlet var leftButton: UIButton!
+    @IBOutlet var rightButton: UIButton!
+    @IBOutlet var logoButton: UIButton!
     
     var popupController:CNPPopupController = CNPPopupController()
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+        logoButton.setImage(UIImage(named: "skylance.png"), forState: .Normal)
+        leftButton.setFAIcon(FAType.FAMap, forState: .Normal)
+        rightButton.setFAIcon(FAType.FABinoculars, forState: .Normal)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // do stuff here
         
+//        leftButton.setFAIcon(FAType.FAMap, forState: .Disabled)
+//        rightButton.setFAIcon(FAType.FABinoculars, forState: .Normal)
         
         // MARK: Displaying user's location
         // Ask for Authorisation from the User.
@@ -55,8 +67,9 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         // MARK: API REQUEST AND PLANE PROJECTION RELATED STUFF
         
         // Let's add more flights!
-        //let flights = ["THY1","THY1055","THY1087","THY109","THY11","THY1316","THY1325","THY1346","THY1368","THY1371","THY1383","THY1395","THY1412","THY1422","THY1486","THY15","THY1505","THY1527","THY1529","THY1534","THY1555","THY1592","THY1593","THY16","THY1635","THY1673","THY1683","THY1684","THY17","THY1705","THY1723","THY1760","THY1769","THY1776","THY1818","THY1827","THY1863","THY1869","THY1875","THY1887","THY1909","THY1919","THY1962","THY1971","THY2015","THY2163","THY2170","THY2205","THY2226","THY2329","THY2334","THY2467","THY2468","THY25","THY2649","THY2677","THY2685","THY2693","THY27","THY2751","THY2833","THY2834","THY2853","THY2912","THY2932","THY307","THY33","THY334","THY35","THY354","THY382","THY402","THY415","THY47","THY5","THY5193","THY53","THY535","THY55","THY57","THY585","THY595","THY61","THY618","THY625","THY629","THY6468","THY6526","THY657","THY667","THY675","THY7","THY71","THY73","THY77","THY787","THY788","THY79","THY81","THY85","THY9","THY91","THY93"]
-        let flights = ["BAW2159","KLM735","IBE6313"]
+        let flights = ["THY1","THY1055","THY1087","THY109","THY11","THY1316","THY1325","THY1346","THY1368","THY1371","THY1383","THY1395","THY1412","THY1422","THY1486","THY15","THY1505","THY1527","THY1529","THY1534","THY1555","THY1592","THY1593","THY16","THY1635","THY1673","THY1683","THY1684","THY17","THY1705","THY1723","THY1760","THY1769","THY1776","THY1818","THY1827","THY1863","THY1869","THY1875","THY1887","THY1909","THY1919","THY1962","THY1971","THY2015","THY2163","THY2170","THY2205","THY2226","THY2329","THY2334","THY2467","THY2468","THY25","THY2649","THY2677","THY2685","THY2693","THY27","THY2751","THY2833","THY2834","THY2853","THY2912","THY2932","THY307","THY33","THY334","THY35","THY354","THY382","THY402","THY415","ACA888","THY47","THY5","THY5193","THY53","THY535","THY55","THY57","THY585","THY595","THY61","THY618","THY625","THY629","THY6468","THY6526","THY657","THY667","THY675","THY7","THY71","THY73","THY77","THY787","THY788","THY79","THY81","THY85","THY9","THY91","THY93","AFR8","ACA1261"]
+        //let flights = ["AFR8","ACA1261"]
+        self.hasPresentedNoWaypointDataFlightError = false // i guess it should be set to false when you refresh
         for flight in flights {
             apiRequest(flight)
         }
@@ -208,6 +221,8 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         }
     }
     
+    var hasPresentedNoWaypointDataFlightError = false
+    
     func apiRequest(flightNumber : String){
         //let flightIdents:[String] = ["KLM757","BER7446","FDX78","ISS39XW","FDX36"]
         let urlString = "http://ufukturhan:6890ddc0551e06285a2173998813314407b4fae6@flightxml.flightaware.com/json/FlightXML2/InFlightInfo?ident=\(flightNumber)" // Your Normal URL String
@@ -222,34 +237,43 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             // Get data as string
             do {
                 let jsonObject = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions()) as! [String : AnyObject]
+                /*******************************************************/
                 guard let result = jsonObject["InFlightInfoResult"] as? [String : AnyObject] else {
                     return
                 }
-                let waypointsString = result["waypoints"]
+                // this is where i have the server response for each flight number from array as in string. And i think we can see if they have empty waypoints and eliminate them and therefore prevent the error?
+                // api response is a string with jsonObject variable here. So i think this might be a good point to begin ?? yes
+                
+                // multiple popups :D we can fıx that
+                
+                
+                let waypointsString = result["waypoints"] as? String
                 let groundSpeed = result["groundspeed"] as! Double
-                
-                /*
-                let destination = result["destination"] as! String
-                let origin = result["origin"] as! String
-                let type = result["type"] as! String
-                let ident = result["ident"] as! String
-                let altitude = result["altitude"] as! Double
-                let departureTime = result["departureTime"] as! Double
-                let arrivalTime = result["arrivalTime"] as! Double
-                */
-                
-                
-                
-                
-                
                 
                 print("groundSpeed = \(groundSpeed)")
                 let planelocation = CLLocation(latitude: Double(result["latitude"] as! NSNumber), longitude: Double(result["longitude"] as! NSNumber))
                 let currentCoordinate = planelocation
                 
-                print("\(waypointsString)")
+                print("waypointsString '\(waypointsString)'")
+                
                 
                 let parts = waypointsString!.componentsSeparatedByString(" ")
+                print("\(parts)")
+                if parts.count == 0 || parts[0] == "" {
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        if self.presentedViewController == nil && self.hasPresentedNoWaypointDataFlightError == false{
+                            let alert = UIAlertController(title: "Missing waypoints", message: "This flight doesn't have any data we could display on the map.", preferredStyle: .Alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
+                            self.presentViewController(alert, animated: true, completion: nil)
+                            self.hasPresentedNoWaypointDataFlightError = true
+                        }
+                        })// is it ok now? so in this case, let's assume i have 20 random flights and 6 of them doesn't have waypoint. will i display remaining 14 flights?
+                    // yes and we can test ıt. I already have a dataset
+                    // it only appears when you dismiss the first one
+                    // let me make it so it does it only once
+                    
+                    return
+                }
                 
                 var arrayOFWaypoint = [CLLocation]()
                 

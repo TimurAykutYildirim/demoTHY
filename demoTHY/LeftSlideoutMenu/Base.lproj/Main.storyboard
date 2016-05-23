@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--First View Controller-->
@@ -40,27 +41,37 @@
                                 <action selector="toggleMenu:" destination="9pv-A4-QxB" id="1o1-yN-sQd"/>
                             </connections>
                         </barButtonItem>
-                        <view key="titleView" contentMode="scaleToFill" id="Vq7-TM-oYn">
-                            <rect key="frame" x="170.5" y="5.5" width="227" height="33"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Xh-5e-zcI">
+                            <rect key="frame" x="170.5" y="7" width="227" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVg-qz-YSR">
-                                    <rect key="frame" x="27" y="0.0" width="46" height="30"/>
-                                    <state key="normal" title="Button"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1X-vv-tO7">
-                                    <rect key="frame" x="133" y="0.0" width="46" height="30"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="DqF-xB-yq1">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="u1X-vv-tO7">
+                                    <rect key="frame" x="502" y="7" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
                                     <connections>
                                         <action selector="changeToSecondTabBarItemPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Kos-Hi-W4x"/>
                                     </connections>
                                 </button>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        </view>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="55Z-Ek-XDS">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pVg-qz-YSR">
+                                    <rect key="frame" x="448" y="7" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="leftButton" destination="pVg-qz-YSR" id="xCC-oR-jkY"/>
+                        <outlet property="logoButton" destination="5Xh-5e-zcI" id="aUQ-hy-4ME"/>
                         <outlet property="mapView" destination="fgo-xc-Mfb" id="Izs-vV-Zwa"/>
+                        <outlet property="navBar" destination="Ptt-rw-ycp" id="ZF3-Rt-41g"/>
+                        <outlet property="rightButton" destination="u1X-vv-tO7" id="z0d-4F-TCy"/>
                         <segue destination="Res-mf-cx8" kind="push" identifier="openPushWindow" id="Q8K-VK-t7D"/>
                     </connections>
                 </viewController>
@@ -87,26 +98,35 @@
                                 <action selector="toggleMenu:" destination="8rJ-Kc-sve" id="Gec-jK-vWa"/>
                             </connections>
                         </barButtonItem>
-                        <view key="titleView" contentMode="scaleToFill" id="mua-MI-5ZE">
-                            <rect key="frame" x="170.5" y="5.5" width="227" height="33"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KYh-7B-WnR">
+                            <rect key="frame" x="170.5" y="7" width="227" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLV-3Q-jCD">
-                                    <rect key="frame" x="27" y="0.0" width="46" height="30"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="b0q-7a-Vpl">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KBK-zW-Jo2">
+                                    <rect key="frame" x="502" y="7" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="WNy-hA-bN0">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JLV-3Q-jCD">
+                                    <rect key="frame" x="448" y="7" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
                                     <connections>
                                         <action selector="switchTabBarToFirstPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="meW-yP-pqz"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBK-zW-Jo2">
-                                    <rect key="frame" x="133" y="0.0" width="46" height="30"/>
-                                    <state key="normal" title="Button"/>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        </view>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="leftButton" destination="JLV-3Q-jCD" id="UcW-Ao-al4"/>
+                        <outlet property="logoButton" destination="KYh-7B-WnR" id="QOF-70-J4e"/>
+                        <outlet property="rightButton" destination="KBK-zW-Jo2" id="KmM-TL-u6i"/>
                         <segue destination="Res-mf-cx8" kind="push" identifier="openPushWindow" id="4uO-pj-oaV"/>
                     </connections>
                 </viewController>
@@ -447,6 +467,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Q8K-VK-t7D"/>
+        <segue reference="4uO-pj-oaV"/>
     </inferredMetricsTieBreakers>
 </document>
